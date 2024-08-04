@@ -24,6 +24,8 @@ gem "turbo-rails"
 gem "stimulus-rails"
 
 gem "tailwindcss-rails", "~> 2.6"
+gem "view_component"
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 

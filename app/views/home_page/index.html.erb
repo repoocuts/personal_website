@@ -1,15 +1,24 @@
 <div class="relative w-full py-12 px-12">
-	<div>
-		<%= image_tag "logo_de_natas.jpg", class: "w-full h-full absolute inset-0 object-cover opacity-75" %>
+	<div class="relative z-10 text-center py-24 md:py-48 auto-rows-auto">
+		<div class="h1-container">
+			<div class="h1-wrapper">
+				<h1 class="h1-front text-white text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-bold mb-12">STUART COOPER</h1>
+				<h1 class="h1-back text-white text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-bold mb-12">GOLDSMID HOUSE</h1>
+			</div>
+		</div>
+		<div class="pt-8 flex justify-center space-x-5">
+			<a href="https://www.linkedin.com/in/stuartcooper-gh/" class="mx-2 text-white hover:text-blue-800">LinkedIn</a>
+			<a href="https://github.com/repoocuts" class="mx-2 text-white hover:text-black">GitHub</a>
+			<a href="https://twitter.com/repoocuts" class="mx-2 text-white hover:text-blue-600">Twitter / X</a>
+		</div>
 	</div>
+	<%= image_tag "logo_de_natas.jpg", class: "w-full h-full absolute inset-0 object-cover opacity-75" %>
 </div>
 
 <div class="w-full bg-zinc-50 p-12 flex justify-center items-center">
 	<div class="max-w-md">
 		<div class="w-24 h-2 bg-blue-800 mb-4 mx-auto"></div>
-		<div class="bg-zinc-50 px-12">
-			<p> Text about me </p>
-		</div>
+		<div class="bg-zinc-50 px-12"><%= render BlurbComponent.new %></div>
 	</div>
 </div>
 
