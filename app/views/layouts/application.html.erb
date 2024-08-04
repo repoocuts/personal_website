@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
+    <main class="container mx-auto mt-28 px-5 flex">
+      <%= yield %>
+    </main>
+    <footer class="bg-zinc-50 flex items-center justify-center w-full">
+      <div class="p-6 md:p-24 flex flex-col items-center">
+        <div class="w-24 h-2 bg-blue-800"></div>
+        <div class="mt-5">
+          <%= mail_to('stuart@goldsmidhouse.com', 'Click here to send me an email', class: 'text-blue-500 hover:text-blue-700') %>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
