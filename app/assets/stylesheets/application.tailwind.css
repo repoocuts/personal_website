@@ -49,3 +49,44 @@ footer {
 .h1-back {
     transform: rotateY(180deg);
 }
+
+.scrolling-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.scrolling-images {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    width: calc(200%);
+}
+
+.scrolling-images img {
+    width: 250px;
+    height: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.image-wrapper {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px;
+}
+
+.image-wrapper img {
+    transform: scale(0.5);
+    transform-origin: center;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
