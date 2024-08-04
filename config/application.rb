@@ -38,6 +38,9 @@ module PersonalSite
 
     # Don't generate system test files.
     config.generators.system_tests = nil
-    config.view_component.view_component_path = 'app/components'
+    config.eager_load_paths << Rails.root.join('app/frontend/components')
+    config.importmap.cache_sweepers << Rails.root.join('app/frontend')
+    config.assets.paths << Rails.root.join('app/frontend')
+    config.view_component.view_component_path = 'app/frontend/components'
   end
 end
